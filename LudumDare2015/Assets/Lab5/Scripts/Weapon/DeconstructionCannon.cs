@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class DeconstructionCannon : MonoBehaviour {
+public class DeconstructionCannon : MonoBehaviour, IWeapon {
 
-	public bool equipped = false;
+	public string leftOption = "LMB: Select objects to destroy";
+	public string rightOption = "RMB: Destroy";
+
+	//public bool equipped = false;
 
 	public GameObject targetInstance;
 
@@ -16,7 +19,7 @@ public class DeconstructionCannon : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(equipped)
+		//if(equipped)
 		{
 			if(Input.GetButtonDown("Fire1"))
 			{
@@ -28,5 +31,15 @@ public class DeconstructionCannon : MonoBehaviour {
 				Destroy (targetInstance);
 			}
 		}
+	}
+
+	public string GetHintLeft()
+	{
+		return leftOption;
+	}
+
+	public string GetHintRight()
+	{
+		return rightOption;
 	}
 }

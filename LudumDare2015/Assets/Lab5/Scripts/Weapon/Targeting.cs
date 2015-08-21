@@ -9,7 +9,6 @@ public class Targeting : MonoBehaviour {
 	private Ray ray;
 	private RaycastHit hit;
 
-	private Transform m_Transform;
 	private Transform mainCamera;
 
 	public bool debug = false;
@@ -17,7 +16,6 @@ public class Targeting : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		m_Transform = GetComponent<Transform>();
 		mainCamera = Camera.main.transform;
 	}
 	

@@ -7,6 +7,9 @@ public class SpinControlled : MonoBehaviour {
 	public float spinSpeed = 90f;
 	public bool rotateAroundFowardAxis = true;
 
+	public string leftText = "Left click to select objects for deconstruction";
+	public string rightText = "Right click to deconstruct objects";
+
 	// Use this for initialization
 	void Start () {
 		m_Transform = GetComponent<Transform>();
