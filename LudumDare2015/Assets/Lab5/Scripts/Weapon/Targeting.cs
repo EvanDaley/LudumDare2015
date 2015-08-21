@@ -4,31 +4,34 @@ using System.Collections;
 public class Targeting : MonoBehaviour {
 
 	public Vector3 target;
-	public Transform targetTransform;
+	public GameObject targetInstance;
 
 	private Ray ray;
 	private RaycastHit hit;
 
 	private Transform m_Transform;
+	private Transform mainCamera;
 
 	public bool debug = false;
+	public LayerMask layerMask;
 
 	// Use this for initialization
 	void Start () {
 		m_Transform = GetComponent<Transform>();
+		mainCamera = Camera.main.transform;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		ray = new Ray(m_Transform.position, Camera.main.transform.forward);
+		ray = new Ray(mainCamera.position, mainCamera.forward);
 
-		if(Physics.Raycast (ray, out hit,15))
+		if(Physics.Raycast (ray, out hit,15,layerMask))
 		{
 			target = hit.point;
-			targetTransform = hit.transform;
+			targetInstance = hit.transform.gameObject;
 
 			if(debug)
-				Debug.Log ("We hit: " + targetTransform);
+				Debug.Log ("We hit: " + targetInstance);
 		}
 	}
 }
