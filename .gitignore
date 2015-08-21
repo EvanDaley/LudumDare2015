@@ -1,0 +1,30 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Oo]bj/
+[Bb]uild
+[Ll]ibrary/
+sysinfo.txt
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
+*.unityproj
+*.booproj
+*.tmp
+*.pidb.meta
+
+# ===================================== #
+# Ignored Assets #
+# ===================================== #
+# Standard*Assets/ == not ignored this time because of the limited standard asset usage
+SkyBox*Volume*2/
+LightmapSnapshot.asset
+LightmapSnapshot.asset.meta
