@@ -2,4 +2,6 @@
 {
 	string GetHintLeft();
 	string GetHintRight();
+	void FireLeft();
+	void FireRight();
 }
