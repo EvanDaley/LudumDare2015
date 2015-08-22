@@ -862,8 +862,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 191436}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0430000015, y: .0869999975, z: -.140000001}
-  m_LocalScale: {x: .0500000007, y: .0500000007, z: .25}
+  m_LocalPosition: {x: -.0430000015, y: .0170000009, z: -.140000001}
+  m_LocalScale: {x: .0500000007, y: .200000003, z: .25}
   m_Children: []
   m_Father: {fileID: 473088}
   m_RootOrder: 3
@@ -898,8 +898,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 105548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .104000002, z: -.064000003}
-  m_LocalScale: {x: .0500000007, y: .0500000007, z: .25}
+  m_LocalPosition: {x: 0, y: -.00600000005, z: -.064000003}
+  m_LocalScale: {x: .100000001, y: .25, z: .25}
   m_Children: []
   m_Father: {fileID: 473088}
   m_RootOrder: 2
@@ -934,7 +934,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 158386}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.65275598, y: 2.28800011, z: .959928274}
+  m_LocalPosition: {x: 1.65275598, y: 2.28800011, z: -2.73000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 483290}
@@ -1504,7 +1504,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6fdaf405c2750df428b202a39d0a44a4, type: 2}
+  - {fileID: 2100000, guid: 4dfc93126ac3f19459a15629fda70288, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1720,7 +1720,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4664445ca07f7cd48bd8de91ef93c8e8, type: 2}
+  - {fileID: 2100000, guid: 4dfc93126ac3f19459a15629fda70288, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1744,7 +1744,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4dfc93126ac3f19459a15629fda70288, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -1960,7 +1960,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6fdaf405c2750df428b202a39d0a44a4, type: 2}
+  - {fileID: 2100000, guid: 4dfc93126ac3f19459a15629fda70288, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2128,7 +2128,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6fdaf405c2750df428b202a39d0a44a4, type: 2}
+  - {fileID: 2100000, guid: 4dfc93126ac3f19459a15629fda70288, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2224,7 +2224,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 6fdaf405c2750df428b202a39d0a44a4, type: 2}
+  - {fileID: 2100000, guid: 4dfc93126ac3f19459a15629fda70288, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2248,7 +2248,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4664445ca07f7cd48bd8de91ef93c8e8, type: 2}
+  - {fileID: 2100000, guid: 4dfc93126ac3f19459a15629fda70288, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
@@ -2924,6 +2924,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  range: 45
 --- !u!114 &11445714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2936,11 +2937,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Molecular Construction Cannon
-  leftOption: 'LMB: Place Single Object'
-  rightOption: 'RMB: Place Object Grouping (from Scanner Gun)'
+  leftOption: 'LMB: Place Object Off Grid'
+  rightOption: 'RMB: Place Object On Grid'
   m_TargetObject: {fileID: 0}
   m_TargetPoint: {x: 0, y: 0, z: 0}
   m_HitNormal: {x: 0, y: 0, z: 0}
+  carbonPrefab: {fileID: 154176, guid: 161f492595aeed949801ef2ddc1102c9, type: 2}
 --- !u!114 &11449980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2989,6 +2991,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  range: 15
 --- !u!114 &11463718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3006,6 +3009,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  range: 20
 --- !u!114 &11479750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3020,8 +3024,8 @@ MonoBehaviour:
   weaponName: {fileID: 0}
   leftHint: {fileID: 0}
   rightHint: {fileID: 0}
-  scrollDelay: .100000001
-  weaponIndex: 0
+  scrollCoolTime: 0
+  weaponIndex: 2
   weapon1: {fileID: 106900}
   weapon2: {fileID: 164416}
   weapon3: {fileID: 108346}
@@ -3044,6 +3048,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
+  range: 15
 --- !u!114 &11484308
 MonoBehaviour:
   m_ObjectHideFlags: 1

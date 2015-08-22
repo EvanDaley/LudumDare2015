@@ -11,7 +11,10 @@ public class CreationCannon : MonoBehaviour, IWeapon {
 	public Vector3 m_TargetPoint;
 	public Vector3 m_HitNormal;
 	private Targeting m_Targeting;
-	
+
+	private GameObject creation;
+	public GameObject carbonPrefab;
+
 	// Use this for initialization
 	void Start () {
 		m_Targeting = GetComponent<Targeting>();
@@ -34,11 +37,33 @@ public class CreationCannon : MonoBehaviour, IWeapon {
 	public void FireLeft()
 	{
 		print ("Construction cannon LMB");
+		//m_TargetObject = m_Targeting.targetInstance;
+		creation = GameObject.Instantiate(carbonPrefab, m_Targeting.target, Quaternion.identity) as GameObject;
+		creation.transform.position = Vector3.MoveTowards (creation.transform.position,transform.position,.5f);
+		
+		//SnapToGrid (creation);
 	}
 	
 	public void FireRight()
 	{
 		print ("Construction cannon RMB");
-		m_TargetObject = m_Targeting.targetInstance;
+		//m_TargetObject = m_Targeting.targetInstance;
+		creation = GameObject.Instantiate(carbonPrefab, m_Targeting.target, Quaternion.identity) as GameObject;
+		creation.transform.position = Vector3.MoveTowards (creation.transform.position,transform.position,.5f);
+
+		SnapToGrid (creation.transform);
+	}
+
+	private void SnapToGrid(Transform ob)
+	{
+		float mx = ob.position.x;
+		float my = ob.position.y;
+		float mz = ob.position.z;
+
+		mx = (float)System.Math.Round((double)mx, 0, System.MidpointRounding.AwayFromZero);
+		my = (float)System.Math.Round((double)my, 0,  System.MidpointRounding.AwayFromZero);
+		mz = (float)System.Math.Round((double)mz, 0,  System.MidpointRounding.AwayFromZero);
+
+		ob.transform.position = new Vector3(mx,my,mz);
 	}
 }
