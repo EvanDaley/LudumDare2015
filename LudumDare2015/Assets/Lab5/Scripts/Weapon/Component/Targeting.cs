@@ -13,6 +13,7 @@ public class Targeting : MonoBehaviour {
 
 	public bool debug = false;
 	public LayerMask layerMask;
+	public float range = 15;
 
 	// Use this for initialization
 	void Start () {
@@ -23,13 +24,18 @@ public class Targeting : MonoBehaviour {
 	void Update () {
 		ray = new Ray(mainCamera.position, mainCamera.forward);
 
-		if(Physics.Raycast (ray, out hit,15,layerMask))
+		if(Physics.Raycast (ray, out hit,range,layerMask))
 		{
 			target = hit.point;
 			targetInstance = hit.transform.gameObject;
 
 			if(debug)
 				Debug.Log ("We hit: " + targetInstance);
+		}
+		else
+		{
+			//set target to invisible square
+			targetInstance = null;
 		}
 	}
 }

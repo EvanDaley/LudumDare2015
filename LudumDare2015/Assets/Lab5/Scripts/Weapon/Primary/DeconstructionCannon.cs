@@ -3,15 +3,23 @@ using System.Collections;
 
 public class DeconstructionCannon : MonoBehaviour, IWeapon {
 
+	public GameObject bloodSplatter1;
+
+	public string weaponName = "Molecular Deconstruction Canon";
 	public string leftOption = "LMB: Select objects to destroy";
 	public string rightOption = "RMB: Destroy";
-
+	
 	public GameObject m_TargetObject;
 	private Targeting m_Targeting;
 
 	// Use this for initialization
 	void Start () {
 		m_Targeting = GetComponent<Targeting>();
+	}
+
+	public string GetWeaponName()
+	{
+		return weaponName;
 	}
 
 	public string GetHintLeft()
@@ -33,6 +41,15 @@ public class DeconstructionCannon : MonoBehaviour, IWeapon {
 	{
 		print ("Destruction cannon RMB");
 		m_TargetObject = m_Targeting.targetInstance;
-		Destroy (m_TargetObject);
+
+		if(m_TargetObject == null)
+			return;
+
+		if(m_TargetObject.tag == "Human")
+			GameObject.Instantiate (bloodSplatter1,m_Targeting.target,Quaternion.identity);
+
+
+		if(m_TargetObject.tag != "Invincible")
+			Destroy (m_TargetObject);
 	}
 }
