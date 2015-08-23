@@ -15,11 +15,16 @@ public class CreationCannon : MonoBehaviour, IWeapon {
 	private GameObject creation;
 	public GameObject carbonPrefab;
 
+	public AudioClip noise;
+	private AudioSource musicSource;				//Reference to the AudioSource which plays music
+
 	// Use this for initialization
 	void Start () {
 		m_Targeting = GetComponent<Targeting>();
+
+		musicSource = GetComponent<AudioSource> ();
 	}
-	
+
 	public string GetHintLeft()
 	{
 		return leftOption;
@@ -52,6 +57,12 @@ public class CreationCannon : MonoBehaviour, IWeapon {
 
 		GameObject obj = GameObject.Instantiate(carbonPrefab, m_Targeting.target, Quaternion.identity) as GameObject;
 		obj.transform.position = Vector3.MoveTowards (obj.transform.position,transform.position,.5f);
+
+		//Play the music clip at the array index musicChoice
+		musicSource.clip = noise;
+		
+		//Play the selected clip
+		musicSource.Play ();
 
 		return obj;
 	}

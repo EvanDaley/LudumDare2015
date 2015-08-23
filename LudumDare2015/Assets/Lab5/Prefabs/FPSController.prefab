@@ -82,6 +82,7 @@ GameObject:
   - 4: {fileID: 473088}
   - 114: {fileID: 11463718}
   - 114: {fileID: 11445714}
+  - 82: {fileID: 8230026}
   m_Layer: 8
   m_Name: SimpleCreationCannon
   m_TagString: Untagged
@@ -99,6 +100,7 @@ GameObject:
   - 4: {fileID: 472884}
   - 114: {fileID: 11449980}
   - 114: {fileID: 11442434}
+  - 82: {fileID: 8289282}
   m_Layer: 8
   m_Name: DeconstructionCanon
   m_TagString: Untagged
@@ -116,6 +118,7 @@ GameObject:
   - 4: {fileID: 405480}
   - 114: {fileID: 11481910}
   - 114: {fileID: 11498532}
+  - 82: {fileID: 8289174}
   m_Layer: 8
   m_Name: ScannerGun
   m_TagString: Untagged
@@ -569,6 +572,7 @@ GameObject:
   - 4: {fileID: 460202}
   - 114: {fileID: 11457716}
   - 114: {fileID: 11435728}
+  - 82: {fileID: 8296714}
   m_Layer: 8
   m_Name: MassModifier
   m_TagString: Untagged
@@ -2776,6 +2780,75 @@ AudioListener:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181370}
   m_Enabled: 1
+--- !u!82 &8230026
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 106900}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 03c02481e27eeb24e88cbde336aa16ff, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: .286000013
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!82 &8268980
 AudioSource:
   m_ObjectHideFlags: 1
@@ -2820,6 +2893,213 @@ AudioSource:
     m_Curve:
     - time: 0
       value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8289174
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 109676}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: .286000013
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8289282
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108346}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: .286000013
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+--- !u!82 &8296714
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164416}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: .286000013
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -2902,8 +3182,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Molecular Modifier
-  leftOption: 'LMB: Select an Object and Draw Holo Menu'
-  rightOption: 'RMB: Deselect'
+  leftOption: 'LMB: [Not implemented for game jam]'
+  rightOption: 'RMB: [Not implemented for game jam]'
   m_TargetObject: {fileID: 0}
   m_TargetPoint: {x: 0, y: 0, z: 0}
   m_HitNormal: {x: 0, y: 0, z: 0}
@@ -2943,6 +3223,7 @@ MonoBehaviour:
   m_TargetPoint: {x: 0, y: 0, z: 0}
   m_HitNormal: {x: 0, y: 0, z: 0}
   carbonPrefab: {fileID: 154176, guid: 161f492595aeed949801ef2ddc1102c9, type: 2}
+  noise: {fileID: 8300000, guid: 642901f18c6a84a458b53c794921c67c, type: 3}
 --- !u!114 &11449980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2956,10 +3237,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bloodSplatter1: {fileID: 141524, guid: edee862bdc7cce646abb8f174a1afae5, type: 2}
   weaponName: Molecular Deconstruction Canon
-  leftOption: 'LMB: Select objects to destroy'
-  rightOption: 'RMB: Destroy'
+  leftOption: LEFT Click to TARGET
+  rightOption: RIGHT Click to DECONSTRUCT
   m_TargetObject: {fileID: 0}
   selectedObjects: []
+  noise: {fileID: 8300000, guid: da4ab81141b6fb24a84667308c2f0c6d, type: 3}
 --- !u!114 &11451434
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3010,7 +3292,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
-  range: 20
+  range: 14
 --- !u!114 &11479750
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3165,8 +3447,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Scanner Gun and Data Storage
-  leftOption: 'LMB: Select Blocks'
-  rightOption: 'RMB: Copy Molecular Formations Into Digital Memory'
+  leftOption: 'LMB: [Not implemented for game jam]'
+  rightOption: 'RMB: Copy Molecular Formations Into Digital Memory [Not implemented]'
   m_TargetObject: {fileID: 0}
   m_TargetPoint: {x: 0, y: 0, z: 0}
   m_HitNormal: {x: 0, y: 0, z: 0}

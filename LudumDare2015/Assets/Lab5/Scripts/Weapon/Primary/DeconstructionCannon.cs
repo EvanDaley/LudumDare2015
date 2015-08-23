@@ -15,10 +15,16 @@ public class DeconstructionCannon : MonoBehaviour, IWeapon {
 
 	public List<GameObject> selectedObjects;
 
+	public AudioClip noise;
+
+	private AudioSource musicSource;				//Reference to the AudioSource which plays music
+
 	// Use this for initialization
 	void Start () {
 		m_Targeting = GetComponent<Targeting>();
 		selectedObjects = new List<GameObject>();
+
+		musicSource = GetComponent<AudioSource> ();
 	}
 
 	public string GetWeaponName()
@@ -51,6 +57,12 @@ public class DeconstructionCannon : MonoBehaviour, IWeapon {
 		{
 			ren.material.color = Color.green;
 		}
+
+		//Play the music clip at the array index musicChoice
+		musicSource.clip = noise;
+		
+		//Play the selected clip
+		musicSource.Play ();
 	}
 
 	public void FireRight()
@@ -69,6 +81,11 @@ public class DeconstructionCannon : MonoBehaviour, IWeapon {
 			selectedObjects = new List<GameObject>();
 		}
 
+		//Play the music clip at the array index musicChoice
+		musicSource.clip = noise;
+		
+		//Play the selected clip
+		musicSource.Play ();
 	}
 
 	public void Deconstruct(GameObject killOb)

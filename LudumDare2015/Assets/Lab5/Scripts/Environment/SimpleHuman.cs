@@ -27,8 +27,9 @@ public class SimpleHuman : MonoBehaviour {
 	{
 		float distance = 10000f;
 
-		distance = Vector3.Distance (transform.position,hidingSpot.position);
-		if(distance < 5)
+		if(hidingSpot != null)
+			distance = Vector3.Distance (transform.position,hidingSpot.position);
+		if(distance < 5 || hidingSpot == null)
 			m_character.m_Crouching = true;
 	}
 
