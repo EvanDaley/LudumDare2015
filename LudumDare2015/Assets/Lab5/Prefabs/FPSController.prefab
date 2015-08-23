@@ -2787,7 +2787,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .0960000008
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2937,8 +2937,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponName: Molecular Construction Cannon
-  leftOption: 'LMB: Place Object Off Grid'
-  rightOption: 'RMB: Place Object On Grid'
+  leftOption: 'LMB: Place Object OFF Grid'
+  rightOption: 'RMB: Place Object ON Grid'
   m_TargetObject: {fileID: 0}
   m_TargetPoint: {x: 0, y: 0, z: 0}
   m_HitNormal: {x: 0, y: 0, z: 0}
@@ -2959,6 +2959,7 @@ MonoBehaviour:
   leftOption: 'LMB: Select objects to destroy'
   rightOption: 'RMB: Destroy'
   m_TargetObject: {fileID: 0}
+  selectedObjects: []
 --- !u!114 &11451434
 MonoBehaviour:
   m_ObjectHideFlags: 1

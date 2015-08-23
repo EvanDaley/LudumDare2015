@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Lab5/Scenes/BuildArea1.unity
+    path: Assets/Lab5/Scenes/MainMenu.unity
   - enabled: 1
-    path: Assets/Lab5/Scenes/BuildArea2.unity
+    path: Assets/Lab5/Scenes/Level1.unity
+  - enabled: 1
+    path: Assets/Lab5/Scenes/Level2.unity
+  - enabled: 1
+    path: Assets/Lab5/Scenes/Level3.unity
+  - enabled: 1
+    path: Assets/Lab5/Scenes/GameComplete.unity

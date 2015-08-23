@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class DeconstructionCannon : MonoBehaviour, IWeapon {
 
@@ -12,9 +13,12 @@ public class DeconstructionCannon : MonoBehaviour, IWeapon {
 	public GameObject m_TargetObject;
 	private Targeting m_Targeting;
 
+	public List<GameObject> selectedObjects;
+
 	// Use this for initialization
 	void Start () {
 		m_Targeting = GetComponent<Targeting>();
+		selectedObjects = new List<GameObject>();
 	}
 
 	public string GetWeaponName()
@@ -34,22 +38,48 @@ public class DeconstructionCannon : MonoBehaviour, IWeapon {
 
 	public void FireLeft()
 	{
+		if(m_Targeting.targetInstance.tag == "Invincible")
+			return;
+
 		print ("Destruction cannon LMB");
+
+		selectedObjects.Add (m_Targeting.targetInstance);
+
+		Renderer [] renderers = m_Targeting.targetInstance.GetComponentsInChildren<Renderer>();
+
+		foreach(Renderer ren in renderers)
+		{
+			ren.material.color = Color.green;
+		}
 	}
 
 	public void FireRight()
 	{
-		print ("Destruction cannon RMB");
-		m_TargetObject = m_Targeting.targetInstance;
+		if(selectedObjects.Count == 0)
+		{
+			Deconstruct (m_Targeting.targetInstance);
+		}
+		else
+		{
+			foreach(GameObject ob in selectedObjects)
+			{
+				Deconstruct (ob);
+			}
 
-		if(m_TargetObject == null)
-			return;
+			selectedObjects = new List<GameObject>();
+		}
 
-		if(m_TargetObject.tag == "Human")
-			GameObject.Instantiate (bloodSplatter1,m_Targeting.target,Quaternion.identity);
+	}
 
-
-		if(m_TargetObject.tag != "Invincible")
-			Destroy (m_TargetObject);
+	public void Deconstruct(GameObject killOb)
+	{
+		if(killOb != null)
+		{
+			if(killOb.tag == "Human")
+				GameObject.Instantiate (bloodSplatter1,killOb.transform.position + new Vector3(0,1,0),Quaternion.identity);
+			
+			if(killOb.tag != "Invincible")
+				Destroy (killOb);
+		}
 	}
 }

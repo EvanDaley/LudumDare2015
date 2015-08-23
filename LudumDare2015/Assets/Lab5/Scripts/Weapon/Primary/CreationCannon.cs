@@ -36,22 +36,24 @@ public class CreationCannon : MonoBehaviour, IWeapon {
 	
 	public void FireLeft()
 	{
-		print ("Construction cannon LMB");
-		//m_TargetObject = m_Targeting.targetInstance;
-		creation = GameObject.Instantiate(carbonPrefab, m_Targeting.target, Quaternion.identity) as GameObject;
-		creation.transform.position = Vector3.MoveTowards (creation.transform.position,transform.position,.5f);
-		
-		//SnapToGrid (creation);
+		creation = CreateObject();
 	}
 	
 	public void FireRight()
 	{
-		print ("Construction cannon RMB");
-		//m_TargetObject = m_Targeting.targetInstance;
-		creation = GameObject.Instantiate(carbonPrefab, m_Targeting.target, Quaternion.identity) as GameObject;
-		creation.transform.position = Vector3.MoveTowards (creation.transform.position,transform.position,.5f);
-
+		creation = CreateObject();
 		SnapToGrid (creation.transform);
+	}
+
+	public GameObject CreateObject()
+	{
+		if(m_Targeting.targetInstance == null)
+			m_Targeting.target = Camera.main.transform.position + Camera.main.transform.forward*m_Targeting.range;
+
+		GameObject obj = GameObject.Instantiate(carbonPrefab, m_Targeting.target, Quaternion.identity) as GameObject;
+		obj.transform.position = Vector3.MoveTowards (obj.transform.position,transform.position,.5f);
+
+		return obj;
 	}
 
 	private void SnapToGrid(Transform ob)

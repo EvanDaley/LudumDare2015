@@ -21,7 +21,9 @@ public class HumanGroup : MonoBehaviour {
 				print ("Update child count: " + transform.childCount);
 
 				humanDead = true;
-				BroadcastMessage("FindHidingPlace");
+
+				if(transform.childCount != 0)
+					BroadcastMessage("FindHidingPlace");
 			}
 		}
 	}
