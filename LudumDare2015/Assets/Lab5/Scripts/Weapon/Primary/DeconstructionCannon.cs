@@ -55,7 +55,7 @@ public class DeconstructionCannon : MonoBehaviour, IWeapon {
 
 		foreach(Renderer ren in renderers)
 		{
-			ren.material.color = Color.green;
+			ren.material.color = Color.clear;
 		}
 
 		//Play the music clip at the array index musicChoice
